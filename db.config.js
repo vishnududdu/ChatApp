@@ -6,7 +6,7 @@ const baseUrl = "mongodb+srv://duduvishnupkl:password%40123@cluster0.khz0i.mongo
 
 export const connectToDatabase = async () => {
     try {
-        await mongoose.connect(`${baseUrl}/chatApp`, {
+        await mongoose.connect(`${baseUrl}`, {
             useNewUrlParser: true,
             useUnifiedTopology: true
         });
