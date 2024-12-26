@@ -2,11 +2,11 @@ import dotenv from 'dotenv';
 dotenv.config();
 import mongoose from 'mongoose';
 
-const baseUrl = process.env.MONGODB || '0.0.0.0:27017';
+const baseUrl = "mongodb+srv://duduvishnupkl:password%40123@cluster0.khz0i.mongodb.net/chatApp";
 
 export const connectToDatabase = async () => {
     try {
-        await mongoose.connect(`mongodb://${baseUrl}/chatApp`, {
+        await mongoose.connect(`${baseUrl}/chatApp`, {
             useNewUrlParser: true,
             useUnifiedTopology: true
         });
